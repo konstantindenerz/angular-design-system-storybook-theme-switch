@@ -4,6 +4,8 @@
 }
 .labs-core-light-theme {
   --md-sys-color-surface: #faf9fd;
+  --md-sys-color-surface-container: #d8d8de;
+  --md-sys-color-surface-container-high: #a6a2a9;
   --md-sys-color-on-surface: #1a1c1e;
 }
 
@@ -11,7 +13,6 @@
   --md-sys-color-surface: #af0095;
   --md-sys-color-on-surface: #ffffff;
 }
-
 
 .labs-synthwave-dark-theme {
   --md-sys-color-surface: #ffade4;
@@ -23,4 +24,9 @@ body {
   background-color: var(--md-sys-color-surface);
   color: var(--md-sys-color-on-surface);
   font-family: 'Road Rage', 'Helvetica Neue', 'serif';
+}
+
+
+* {
+  transition: all .3s ease;
 }

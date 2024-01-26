@@ -13,7 +13,23 @@ const preview: Preview = {
         date: /Date$/i,
       },
     },
-    backgrounds: { disable: true },
+    backgrounds: {
+      default: 'var(--md-sys-surface)',
+      values: [
+        {
+          name: 'Surface',
+          value: 'var(--md-sys-surface)',
+        },
+        {
+          name: 'Surface Container High',
+          value: 'var(--md-sys-color-surface-container-high)',
+        },
+        {
+          name: 'Surface Container',
+          value: 'var(--md-sys-color-surface-container)',
+        }
+      ],
+    },
   },
   globalTypes: {
     theme: {
@@ -38,11 +54,12 @@ const preview: Preview = {
   },
   decorators: [
     componentWrapperDecorator(
-      (story) => `<div [class]="labs-theme-manager">${story}</div>`,
+      (story) => `${story}`,
       ({globals}) => {
-        document.documentElement.className = '';
-        document.documentElement.classList.add(`labs-${globals['theme']}-theme`);
-        return {currentTheme: globals['theme']};
+        const root = document.documentElement;
+        root.className = '';
+        root.classList.add(`labs-${globals['theme']}-theme`);
+        return {};
       }
     ),
   ],
