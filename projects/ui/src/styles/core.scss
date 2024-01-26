@@ -1,0 +1,26 @@
+.labs-core-dark-theme {
+  --md-sys-color-surface: #121316;
+  --md-sys-color-on-surface: #c7c6ca;
+}
+.labs-core-light-theme {
+  --md-sys-color-surface: #faf9fd;
+  --md-sys-color-on-surface: #1a1c1e;
+}
+
+.labs-synthwave-light-theme {
+  --md-sys-color-surface: #af0095;
+  --md-sys-color-on-surface: #ffffff;
+}
+
+
+.labs-synthwave-dark-theme {
+  --md-sys-color-surface: #ffade4;
+  --md-sys-color-on-surface: #5f0050;
+}
+
+
+body {
+  background-color: var(--md-sys-color-surface);
+  color: var(--md-sys-color-on-surface);
+  font-family: 'Road Rage', 'Helvetica Neue', 'serif';
+}
